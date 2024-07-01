@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+        <meta name="description" content="" >
+        <meta name="author" content="" >
+        <title>Zapisy na rejsy</title>
+        <link rel="icon" type="image/x-icon" href="assets/icon.png" >
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" >
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" >
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" >
+    </head>
+    <body>
+        <!-- Nawigacja-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html"></a>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Start</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="katania.html">Katania</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="taormina.html">Taormina</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('assets/img/taorminaMorze.jpg');opacity: 0.7">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Zapisz się na rejs</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>Aby wziąć udział w rejsie wypełnij poniższy formularz. Cena rejsu dla osoby dorosłej wynosi 60 euro. Dla osoby niepełnoletniej 50 euro. Dodatkowe opcje nie wliczją sie do ceny podstawowej.</p>
+
+
+                        <form id="rejsForm" class="container" onsubmit="zapiszDane()" >
+
+                            <!-- rząd dla formularza -->
+                            <div class="row">
+
+                                <!-- część formularza z danymi osobowymi -->
+                                <div class="col-md-5">
+                                    <p style="text-align: center">Dane osobowe</p>
+
+                                    <hr> <!-- pozioma linia oddzielająca -->
+                                    <div id="imieERR" class="invalid-feedback" style="display: none">
+                                        Proszę wpisać imię
+                                    </div>
+                                    <input id="imie" class="form-control mb-3" type="text" placeholder="Imię" required>
+
+                                    <div id="nazwiskoERR" class="invalid-feedback" style="display: none">
+                                        Proszę wpisać nazwisko
+                                    </div>
+                                    <input id="nazwisko" class="form-control mb-3" type="text" placeholder="Nazwisko" required>
+
+                                    <div id="emailERR" class="invalid-feedback" style="display: none">
+                                        Proszę wpisać email
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                        <label for="email">Adres email</label>
+                                    </div>
+
+                                    <div id="nrTelERR" class="invalid-feedback" style="display: none">
+                                        Proszę wpisać numer telefonu
+                                    </div>
+                                    <input id="nrTel" class="form-control mb-3" type="number" placeholder="Numer telefonu" aria-label="default input example"  required>
+
+                                    <label >Narodowość: </label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="1">Polska</option>
+                                        <option value="2">Niemcy</option>
+                                        <option value="3">Czechy</option>
+                                        <option value="3">Słowacja</option>
+                                        <option value="3">Węgry</option>
+                                        <option value="3">Litwa</option>
+                                        <option value="3">Austria</option>
+                                        <option value="3">Hiszpania</option>
+                                    </select>
+
+                                    <p style="text-align: center" >Sposób płatności </p>
+                                    <div id="sposobPlatnosciERR" class="invalid-feedback" style="display: none">
+                                        Proszę wybrać metodę płatności
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="platnosc" id="platnoscKarta">
+                                        <label class="form-check-label" for="platnoscKarta">karta kredytowa</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="platnosc" id="platnoscRevolut">
+                                        <label class="form-check-label" for="platnoscRevolut">Revolut</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="platnosc" id="platnoscPayPal">
+                                        <label class="form-check-label" for="platnoscPayPal">PayPal</label>
+                                    </div>
+                                    <div id="blik" class="form-check" style="display: block">
+                                        <input class="form-check-input" type="radio" name="platnosc" id="platnoscBlik">
+                                        <label class="form-check-label" for="platnoscBlik">Blik</label>
+                                    </div>
+
+                                </div>
+
+                                <!-- pionowa linia oddzielająca -->
+                                <div class="col-md-1 d-flex justify-content-center align-items-center">
+                                    <div class="vr" style="height: 100%; width: 2px; background-color: #000;"></div>
+                                </div>
+
+                                <!-- część formularza z wyborem rejsu -->
+                                <div class="col-md-6">
+                                    <p style="text-align: center">Szczegóły rejsu</p>
+
+                                    <!-- poziona linia oddzielająca -->
+                                    <hr>
+
+                                    <p>Wybierz port z którego chcesz wyruszyć</p>
+                                    <div id="wyborPortuERR" class="invalid-feedback" style="display: none">
+                                        Proszę wybrać port
+                                    </div>
+
+
+                                    <!-- RADIO katania i taormina -->
+                                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card h-100" style="background-image: url('assets/img/katania-widok.jpg'); background-size: cover; background-position: center;">
+                                                <div class="card-body d-flex flex-column" style="background-color: rgba(255, 255, 255, 0.75);">
+                                                    <h2 class="card-title" style="text-align: center; font-size: medium;">Port Katania</h2>
+                                                </div>
+                                                <div class="card-footer mt-auto" style="background-color: rgba(255, 255, 255, 0.75); text-align: center;">
+                                                    <input class="form-check-input" type="radio" name="wyborPortu" id="portKatania">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card h-100" style="background-image: url('assets/img/taormina.jpg'); background-size: cover; background-position: center;">
+                                                <div class="card-body d-flex flex-column" style="background-color: rgba(255, 255, 255, 0.75);">
+                                                    <h2 class="card-title" style="text-align: center; font-size: medium;">Port Taormina</h2>
+                                                </div>
+                                                <div class="card-footer mt-auto" style="background-color: rgba(255, 255, 255, 0.75); text-align: center;">
+                                                    <input class="form-check-input" type="radio" name="wyborPortu" id="portTaormina">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- suwaki pozwalajace na wybor ilosci osob -->
+                                    <div class="form-group">
+                                        <label for="iloscDoroslych" class="form-label">Ilość osób dorosłych</label>
+                                        <div class="d-flex align-items-center">
+                                            <input type="range" class="form-range" min="1" max="10" step="1" id="iloscDoroslych">
+                                            <span id="iloscDoroslychValue" class="ms-2"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="iloscDzieci" class="form-label">Ilość osób poniżej 18 r.ż.</label>
+                                        <div class="d-flex align-items-center">
+                                            <input type="range" class="form-range" min="0" max="10" step="1" id="iloscDzieci">
+                                            <span id="iloscDzieciValue" class="ms-2"></span>
+                                        </div>
+                                    </div>
+                                    <!-- dodatkowe opcje w formie checkbox -->
+                                    <p>Dodatkowe opcje: <span id="cenaDodatkow" class="ms-2"></span></p>
+
+                                    <table class="table">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="Dodatek1">
+                                                    <label class="form-check-label" for="Dodatek1">Nurkowanie z akwalungiem</label>
+                                                </div>
+                                            </td>
+                                            <td><span id="cenaDodatku1" class="ms-2"></span></td> <!-- po wybraniu dodatku wyswietla sie tu jego cena-->
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="Dodatek2">
+                                                    <label class="form-check-label" for="Dodatek2">Degustacja miejscowych potraw</label>
+                                                </div>
+                                            </td>
+                                            <td><span id="cenaDodatku2" class="ms-2"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="Dodatek3">
+                                                    <label class="form-check-label" for="Dodatek3">Miejsca z najlepszym widokiem</label>
+                                                </div>
+                                            </td>
+                                            <td><span id="cenaDodatku3" class="ms-2"></span></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                    <!-- obliczona cena calkowita zostaje wpisana w pole-->
+                                    <p style="text-align: center">Całkowiata cena</p>
+                                    <input id="calkowitaCena" style="background-color: #c7dbd2" class="form-control" type="text" value="" aria-label="Disabled input example" disabled readonly>
+                                    <p><button type="button" class="btn btn-outline-secondary w-100 mb-3" onclick="sprawdzCenePLN()">Sprawdź cenę w PLN</button>
+                                    <p id="kursEuro" style="text-align: center"></p>
+                                    <p id="cenaPLN" style="text-align: center"></p>
+                                    <hr>
+
+
+                                </div>
+                                <!-- wyswietlanie danych z localstorage -->
+                                <div id="daneLS" style="display: none"></div>
+
+                                <div class="col-md-12" style="margin-top: 5%;">
+                                    <button type="submit" class="btn btn-outline-success w-100 mb-3" onclick="return sprawdz()" >Zapisz</button>
+
+                                    <button type="button" class="btn btn-outline-primary w-100 mb-3" onclick="wyswietlDane()">Wyświetl zapisane dane</button>
+
+                                    <button type="button" class="btn btn-outline-danger w-100 mb-3" onclick="usunDane()">Usuń zapisane dane</button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+
+        </main>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; KK 2024</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/walidacja.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

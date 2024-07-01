@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+    <meta name="description" content="" >
+    <meta name="author" content="" >
+    <title>Miasteczko Taormina</title>
+    <link rel="icon" type="image/x-icon" href="assets/icon.png" >
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" >
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" >
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" >
+</head>
+<body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Start</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="rejsFormK.html">Rejsy</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="galeria_taormina.html">Galeria-Taormina</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="katania.html">Katania</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('assets/img/taorminaWidok.jpg');opacity: 0.7">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>Taormina</h1>
+                    <span class="subheading">Poznaj to urokliwe miasteczko</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p>Taormina, malownicze miasteczko położone na wschodnim wybrzeżu Sycylii, to jedno z najbardziej urokliwych miejsc na włoskiej wyspie. Słynące z zapierających dech w piersiach widoków na Morze Jońskie i majestatyczny wulkan Etna, Taormina przyciąga turystów swoim niepowtarzalnym klimatem i bogatą historią.</p>
+                <h2 class="section-heading" style="text-align: center">Mapa miasta</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.2965355130063!2d15.287925689594328!3d37.85335142276618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131411a191a0d9b5%3A0x74a19a34d616e949!2s98039%20Taormina%2C%20Mesyna%2C%20W%C5%82ochy!5e0!3m2!1spl!2spl!4v1717878862773!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <h2 class="section-heading" style="text-align: center">Miejsca warte zobaczenia</h2>
+
+                <!-- Bootstrap Carousel-->
+                <!-- wykorzystanie szablonu bootstrap carousel do wykonania prezentacji miejsc wartych zobaczenia-->
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/img/taorminaWidok2.jpg" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;opacity: 0.7;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 style="color: black;">Punkt Widokowy</h5>
+                                <button id="firstSlideButtonT" type="button" onclick="pokazLokalizacje('firstSlideButtonT')" class="btn btn-outline-dark">Lokalizacja</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/taorminaBudynek.jpg" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;opacity: 0.7;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 style="color: black;">Park Miejski</h5>
+                                <button id="secondSlideButtonT" type="button" onclick="pokazLokalizacje('secondSlideButtonT')" class="btn btn-outline-dark">Lokalizacja</button>
+                                <!-- dodanie własnych przycisków które pokazują lokalizacje obiektu-->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/TaorminaPlaza.jpg" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;opacity: 0.7;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 style="color: black;">Wybrzeże</h5>
+                                <button id="thirdSlideButtonT" type="button" onclick="pokazLokalizacje('thirdSlideButtonT')" class="btn btn-outline-dark">Lokalizacja</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/taorminaUliczka.jpg" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;opacity: 0.7;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 style="color: black;">Stare Miasto</h5>
+                                <button id="fourthSlideButtonT" type="button" onclick="pokazLokalizacje('fourthSlideButtonT')" class="btn btn-outline-dark">Lokalizacja</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- przyciski odpowiedzialne za przewijanie karuzeli-->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- wyswietlenie lokalizacji obiektu po kliknieciu przycisku, dwukrotne nacisniecie sprawia ukrycie mapy-->
+                <div id="localization-container" class="map-container" style="display: none;">
+                    <iframe id="lokalizacja-zabytku" src="" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+
+                <!-- AKTUALNA POGODA -->
+                <!-- Wyswietlenie aktualnej pogody za pomocą Fetch APi-->
+                <p></p><div class="card mb-3" style="max-width: 700px">
+                <div class="row g-0">
+                    <div class="col-md-4">
+
+                        <img id="weather-iconT" src=""  class="img-fluid rounded-start" alt="Ikona pogody" >
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Aktualna Pogoda</h5>
+                            <p class="card-text"><div id="weatherT">
+
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Footer-->
+<footer class="border-top">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+
+                <div class="small text-center text-muted fst-italic">Copyright &copy; KK 2024</div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+</body>
+</html>
